@@ -1,0 +1,25 @@
+﻿@model IEnumerable<CurrencyRate>
+
+<h1>Currency Rates</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Currency Code</th>
+            <th>Currency Name</th>
+            <th>Sell Rate</th>
+            <th>Buy Rate</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var rate in Model)
+        {
+            <tr>
+                <td>@rate.CurrencyCode</td>
+                <td>@rate.CurrencyName</td>
+                <td>@rate.TelegraphicTransferSellRate</td>
+                <td>@rate.TelegraphicTransferBuyRate</td>
+            </tr>
+        }
+    </tbody>
+</table>
